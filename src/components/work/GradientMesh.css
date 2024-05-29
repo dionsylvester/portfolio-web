@@ -1,6 +1,7 @@
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
   @font-face {
@@ -24,12 +25,10 @@
   }
 
   .self_img {
-    height: 900px;
-    width: 600px;
-    bottom: 0;
-    margin-left: 50%;
-    margin-top: 16rem;
-    position: relative;
+    height: 100%;
+    margin-left: 50vw;
+    margin-top: 24rem;
+    position: absolute;
     cursor: none;
   }
 
@@ -64,9 +63,9 @@
     margin: 55rem 0 0 0;
     font-weight: lighter;
     white-space: nowrap;
-    position: absolute;
     transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: default;
+    position: absolute;
   }
 
   .title-scroll-2 {
@@ -76,9 +75,9 @@
     margin: 55rem 0 0 320rem;
     font-weight: lighter;
     white-space: nowrap;
-    position: absolute;
     transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: default;
+    position: absolute;
   }
 
   :root {
@@ -223,4 +222,8 @@
   
   .dark .text-container{
     color: white;
+  }
+
+  .app-container {
+    width: 100%;
   }

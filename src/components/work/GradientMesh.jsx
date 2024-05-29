@@ -61,8 +61,8 @@ function GradientMesh(){
                 {
                     show && (<>
                         <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
-                        <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
-                        <motion.h1 className='title-scroll-2' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
+                        {/* <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
+                        <motion.h1 className='title-scroll-2' style={{x}}>Dionisius Sylvester Wime –</motion.h1> */}
                     </>)
                 }
             </div>
