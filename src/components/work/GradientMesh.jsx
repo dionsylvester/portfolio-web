@@ -51,7 +51,7 @@ function GradientMesh(){
     })
 
     const { scrollYProgress } = useScroll();
-    const x = useTransform(scrollYProgress, [0, 1], [-1500, -600]);
+    const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
 
     return (
         <div className="app-container">
@@ -59,10 +59,11 @@ function GradientMesh(){
                 <button className="text-button" onClick={showElement}>Hello, I'm Dion.</button>
                 {
                     show && (<>
-                        <img className="self_img" src={self_image} alt="Self Image"/>
+                        <div className='foto_div'>
+                            <img className="self_img" src={self_image} alt="Self Image"/>
+                        </div>
                         <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
-                        {/* <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
-                        <motion.h1 className='title-scroll-2' style={{x}}>Dionisius Sylvester Wime –</motion.h1> */}
+                        <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
                     </>)
                 }
             </div>

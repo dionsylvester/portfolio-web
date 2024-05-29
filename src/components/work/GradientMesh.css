@@ -12,7 +12,7 @@
   .text-container {
     z-index: 100;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -22,14 +22,19 @@
     justify-content: center;
     align-items: center;
     opacity: 0.8;
+    overflow: hidden;
+  }
+
+  .foto_div {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
 
   .self_img {
-    height: 90%;
-    margin-left: 35vw;
-    margin-top: 23.3rem;
-    bottom: 0;
-    position: relative;
+    height: 80%;
+    margin-left: 45vw;
+    margin-top: 15rem;
     cursor: none;
   }
 
@@ -56,24 +61,12 @@
     text-align: left;
     z-index: 2;
   }
-  
+
   .title-scroll {
     font-family: "Montserrat-Light";
     font-size: 12em;
     z-index: 1;
-    margin: 55rem 0 0 0;
-    font-weight: lighter;
-    white-space: nowrap;
-    transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: default;
-    position: absolute;
-  }
-
-  .title-scroll-2 {
-    font-family: "Montserrat-Light";
-    font-size: 12em;
-    z-index: 1;
-    margin: 55rem 0 0 320rem;
+    margin: 45rem 0 0 0;
     font-weight: lighter;
     white-space: nowrap;
     transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
