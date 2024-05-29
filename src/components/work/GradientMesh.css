@@ -66,7 +66,7 @@
     font-family: "Montserrat-Light";
     font-size: 12em;
     z-index: 1;
-    margin: 30% 0 0 0;
+    margin: 30rem 0 0 0;
     font-weight: lighter;
     white-space: nowrap;
     transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
