@@ -1,0 +1,52 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.text-desc {
+    padding: 5rem 1rem 5rem 20%;
+    font-size: 1.5rem;
+    width: 70%;
+    text-align: left;
+}
+
+.read-button {
+    border-radius: 50%;
+    padding: 2.5rem;
+    cursor: pointer;
+    margin: 0 1%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background: none;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498DB;
+    z-index: -1;
+    transition: 0.8s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:hover::before {
+    height: 180%;
+}
