@@ -57,9 +57,9 @@ function GradientMesh(){
         <div className="app-container">
             <div className="text-container">
                 <button className="text-button" onClick={showElement}>Hello, I'm Dion.</button>
-                <img className="self_img" src={self_image} alt="Self Image"/>
                 {
                     show && (<>
+                        <img className="self_img" src={self_image} alt="Self Image"/>
                         <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
                         {/* <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
                         <motion.h1 className='title-scroll-2' style={{x}}>Dionisius Sylvester Wime –</motion.h1> */}

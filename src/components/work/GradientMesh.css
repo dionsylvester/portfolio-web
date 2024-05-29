@@ -26,9 +26,10 @@
 
   .self_img {
     height: 100%;
-    margin-left: 50vw;
-    margin-top: 24rem;
-    position: absolute;
+    margin-left: 40vw;
+    margin-top: 20rem;
+    bottom: 0;
+    position: relative;
     cursor: none;
   }
 
@@ -48,7 +49,7 @@
     position: absolute;
     color: green;
     font-size: 1rem;
-    margin-top: 7rem;
+    margin-top: 8rem;
     height: auto;
     width: 26.7rem;
     justify-content: center;
