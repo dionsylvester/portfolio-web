@@ -40,7 +40,15 @@
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   justify-content: center;
-  z-index: 26;
+  z-index: 20;
+}
+
+.scroll-image img {
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-image img:hover {
+  transform: scale(1.1);
 }
 
 .location_div {
@@ -49,13 +57,13 @@
 
 .area_location {
   position: absolute;
-  top: 15rem;
+  top: 12rem;
   left: 0;
 }
 
 .pin_location {
   position: absolute;
-  top: 15rem;
+  top: 12rem;
   left: 0;
   margin-top: 0.5rem;
   height: 60px;
@@ -66,7 +74,7 @@
   font-size: 2rem;
   color: #fffaf1;
   position: absolute;
-  top: 15.8rem;
+  top: 12.8rem;
   left: 3.7rem;
   margin-top: 0.5rem;
 }
@@ -105,7 +113,7 @@
   color: #417755;
   font-size: 1.5rem;
   width: 100%;
-  top: 35rem;
+  top: 33.3rem;
   text-align: center;
   box-sizing: border-box;
   display: block;

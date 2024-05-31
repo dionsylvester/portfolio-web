@@ -9,8 +9,8 @@ const items = [
         type: "APPLICATION",
         title: "Carz",
         img: gambar_satu,
-        desc: "2024 – Mobile App to Predict Car Price using ANN PSO (concept)",
-        language: "Figma Python R",
+        desc: "2024 – Mobile App (concept) to Predict Car Price using ANN PSO",
+        language: "Figma Jupyter-Notebook Python R",
     },
     {
         id: 2,

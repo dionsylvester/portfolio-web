@@ -68,7 +68,7 @@ const GradientMesh = ({theme, setTheme}) => {
                     <img src={zoom_png}/>
                 </motion.div>
                 <button className="text-button" onClick={showElement}>Hello, I'm Dion.</button>
-                <motion.div initial={{opacity:0}} animate={{opacity: show ? 1: 0}} transition={{duration:0.5}}>
+                <motion.div initial={{opacity:0}} animate={{opacity: show ? 1: 0}} transition={{duration:0.33}}>
                     <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
                     <div className='location_div'>
                         <img className='area_location' src={theme == 'light' ? area_logo_dark : area_logo_light}/>
