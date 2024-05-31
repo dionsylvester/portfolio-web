@@ -110,7 +110,7 @@
 .text-container .type-writer h1 {
   background-color: transparent;
   position: relative;
-  color: #417755;
+  color: #64ffda;
   font-size: 1.5rem;
   width: 100%;
   top: 33.3rem;
@@ -285,6 +285,10 @@
 
 .dark .text-container .type-writer {
   color: #64ffda;
+}
+
+.dark .text-container .type-writer h1 {
+  color: #57cbff;
 }
 
 .app-container {

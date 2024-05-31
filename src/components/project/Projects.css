@@ -36,10 +36,19 @@ section {
     text-align: center;
     color: #417755;
     font-size: 30px;
+    transition: opacity 1s ease-out;
+    opacity: 1;
 }
 
 .portfolio .progress h1 {
     font-family: 'NeueMontreal-Regular', sans-serif;
+    letter-spacing: 1px;
+}
+
+.progress.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 0s linear 0s;
 }
 
 .portfolio .progress-bar {

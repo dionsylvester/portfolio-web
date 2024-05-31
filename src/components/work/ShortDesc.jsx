@@ -2,11 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './ShortDesc.css';
 
-const ShortDesc = ({theme, setTheme}) => {
-    const toggle_mode = () => {
-        theme == 'light' ? setTheme('dark') : setTheme('light')
-    }
-
+const ShortDesc = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import './Projects.css'
 import gambar_satu from '../../assets/projects/test-foto.png';
@@ -35,10 +35,8 @@ const Single = ({item}) =>{
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        // offset: ["start start", "end start"],
     });
 
-    // const y = useTransform(scrollYProgress, [0,1], ["0%", "-300%"]);
     const y = useTransform(scrollYProgress, [0,1], [-100, 100]);
 
     return(
@@ -60,13 +58,10 @@ const Single = ({item}) =>{
     )
 }
 
-
-const Projects = ({theme, setTheme}) => {
-    const toggle_mode = () => {
-        theme == 'light' ? setTheme('dark') : setTheme('light');
-    }
-
+const Projects = () => {
     const ref = useRef(null);
+
+    const [allViewed, setAllViewed] = useState(false);
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -78,18 +73,25 @@ const Projects = ({theme, setTheme}) => {
         damping: 30,
     });
 
+    useEffect(() => {
+        const unsubscribe = scrollYProgress.onChange((value) => {
+            setAllViewed(value === 0);
+        });
+
+        return () => unsubscribe();
+    }, [scrollYProgress]);
+
     return(<>
         <div className="portfolio" ref={ref}>
-            <div className="progress">
-                <h1>Featured Projects</h1>
+            <div className={`progress ${allViewed ? 'hidden' : ''}`}>
+                {!allViewed && <h1>Featured Projects</h1>}
                 <motion.div style={{ scaleX }} className="progress-bar"></motion.div>
             </div>
-            {items.map(item=>(
+            {items.map(item => (
                 <Single item={item} key={item.id} />
             ))}
         </div>
     </>);
-    
 }
 
 export default Projects;

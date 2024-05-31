@@ -3,11 +3,7 @@ import logo_dsw_light from '../../assets/DSW-black.png';
 import logo_dsw_dark from '../../assets/DSW-white.png';
 import './Footer.css';
 
-const Footer = ({theme, setTheme}) => {
-    const toggle_mode = () => {
-        theme == 'light' ? setTheme('dark') : setTheme('light');
-    }
-
+const Footer = ({theme}) => {
     return(<>
         <div className="footer">
             <div className="content-footer">

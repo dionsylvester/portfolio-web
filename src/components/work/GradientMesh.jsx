@@ -8,11 +8,7 @@ import area_logo_light from '../../assets/area-location-light.png';
 import zoom_png from '../../assets/testing.png';
 import './GradientMesh.css';
 
-const GradientMesh = ({theme, setTheme}) => {
-    const toggle_mode = () => {
-        theme == 'light' ? setTheme('dark') : setTheme('light')
-    }
-
+const GradientMesh = ({theme}) => {
     const interBubbleRef = useRef(null);
 
     useEffect(() => {
