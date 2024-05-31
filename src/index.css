@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,12 +6,14 @@
   font-family: Helvetica, sans-serif;
 }
 
-.container{
+.container {
   width: 100vw;
   min-height: 100vh;
-  background-color: transparent;
+  background-color: #fffaf1;
+  color: #1c1c1c;
 }
 
-.container.dark{
-  background: #222222;
+.container.dark {
+  background: #111;
+  color: #fff6e5;
 }

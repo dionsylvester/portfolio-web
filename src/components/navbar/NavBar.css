@@ -1,4 +1,9 @@
-.bar{
+@font-face {
+    font-family: 'SF-Mono';
+    src: url(../../assets/fonts/SF-Mono.dmg)
+}
+
+.bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +16,43 @@
     transition: 1s;
 }
 
-.bar a{
+.bar .social-icon {
+    position: fixed;
+    bottom: 0px;
+    left: 60px;
+    right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #64ffda;
+    z-index: 15;
+}
+
+.social-icon svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.bar .name-icon {
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #64ffda;
+    z-index: 15;
+}
+
+.name-icon p {
+    font-family: 'SF-Mono', monospace;
+    writing-mode: vertical-rl;
+    margin-bottom: 20px;
+}
+
+.bar a {
     color: inherit;
     text-decoration: none;
     height: 100%;
@@ -25,13 +66,13 @@
     background-color: #777777;
 }
 
-.logo-dsw{
+.logo-dsw {
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
-ul{
+ul {
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -42,22 +83,30 @@ ul{
     background-color: white;
 }
 
-ul li{
+ul li {
     margin: 10px 20px;
     font-size: 1.125rem;
     cursor: pointer;
 }
 
-.icon-mode{
+.icon-mode {
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
-.dark .bar{
-    color: #FFFFFF;
+.dark .bar {
+    color: #fffaf1;
 }
 
-.dark ul{
+.dark ul {
     background-color: #000000;
+}
+
+.dark .social-icon {
+    color: #57cbff;
+}
+
+.dark .name-icon {
+    color: #57cbff;
 }

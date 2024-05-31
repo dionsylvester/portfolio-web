@@ -1,0 +1,112 @@
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "SF-Mono";
+    src: url(../../assets/fonts/SF-Mono.dmg)
+}
+
+@font-face {
+    font-family: "NeueMontreal-Light";
+    src: url(../../assets/fonts/NeueMontreal-Light.otf)
+}
+
+@font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf)
+}
+
+@font-face {
+    font-family: "NeueMontreal-Medium";
+    src: url(../../assets/fonts/NeueMontreal-Medium.otf)
+}
+
+.portfolio {
+    position: relative;
+}
+
+.portfolio .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 4.2rem;
+    text-align: center;
+    color: #417755;
+    font-size: 30px;
+}
+
+.portfolio .progress h1 {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+}
+
+.portfolio .progress-bar {
+    height: 10px;
+    margin-top: 2px;
+    background-color: #d2e692;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.image-container {
+    flex: 1;
+    /* height: 50%; */
+}
+
+.image-container img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.text-project {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-project h3 {
+    font-family: 'NeueMontreal-Light', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .2em;
+}
+
+.text-project h2 {
+    font-family: 'NeueMontreal-Medium', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.text-project p {
+    color: gray;
+    font-size: 20px;
+}
+
+.text-project p.type-language {
+    font-family: 'SF-Mono', monospace;
+    color: #57cbff;
+}
+
+.dark .text-project p.type-language {
+    color: #64ffda;
+}

@@ -2,9 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import self_image from '../../assets/Dionisius-edited.png';
+import location_logo from '../../assets/Pin-location.png';
+import area_logo_dark from '../../assets/area-location-dark.png';
+import area_logo_light from '../../assets/area-location-light.png';
+import zoom_png from '../../assets/testing.png';
 import './GradientMesh.css';
 
-function GradientMesh(){
+const GradientMesh = ({theme, setTheme}) => {
+    const toggle_mode = () => {
+        theme == 'light' ? setTheme('dark') : setTheme('light')
+    }
+
     const interBubbleRef = useRef(null);
 
     useEffect(() => {
@@ -36,12 +44,6 @@ function GradientMesh(){
         };
     }, []);
 
-    const [show, setShow] = useState(false);
-
-    const showElement = () => {
-        setShow(true);
-    }
-
     const [typewriter] = useTypewriter({
         words: ['Software Developer', 'Programmer', 'Tech Enthusiast'],
         loop: {},
@@ -52,20 +54,32 @@ function GradientMesh(){
 
     const { scrollYProgress } = useScroll();
     const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
+    const scale = useTransform(scrollYProgress, [0,1], [1,4]);
+
+    const [show, setShow] = useState(false);
+    const showElement = () => {
+      setShow(!show);
+    }
 
     return (
         <div className="app-container">
             <div className="text-container">
+                <motion.div className='scroll-image' style={{scale, originX: 0.5, originY: 0.5}}>
+                    <img src={zoom_png}/>
+                </motion.div>
                 <button className="text-button" onClick={showElement}>Hello, I'm Dion.</button>
-                {
-                    show && (<>
-                        <div className='foto_div'>
-                            <img className="self_img" src={self_image} alt="Self Image"/>
-                        </div>
-                        <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
-                        <motion.h1 className='title-scroll' style={{x}}>Dionisius Sylvester Wime –</motion.h1>
-                    </>)
-                }
+                <motion.div initial={{opacity:0}} animate={{opacity: show ? 1: 0}} transition={{duration:0.5}}>
+                    <div className="type-writer"><h1>{typewriter}<Cursor cursorStyle='|'/></h1></div>
+                    <div className='location_div'>
+                        <img className='area_location' src={theme == 'light' ? area_logo_dark : area_logo_light}/>
+                        <img className='pin_location' src={location_logo}/>
+                        <p className='text_location'>Tangerang, INA</p>
+                    </div>
+                    <div className='foto_div'>
+                        <img className="self_img" src={self_image} alt="Self Image"/>
+                    </div>
+                </motion.div>
+                <motion.h1 className='title-scroll' initial={{opacity:0}} animate={{opacity: show ? 1: 0}} transition={{duration:1}} style={{x}} >Dionisius Sylvester Wime –</motion.h1>
             </div>
             <div className="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">

@@ -1,54 +1,63 @@
-.about-container {
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    overflow-x: hidden;
+@font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf)
 }
 
-.text-desc {
-    padding: 5rem 1rem 5rem 20%;
-    font-size: 1.5rem;
-    width: 70%;
-    text-align: left;
-}
-
-.read-button {
-    border-radius: 50%;
-    padding: 2.5rem;
-    cursor: pointer;
-    margin: 0 1%;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid aqua;
-}
-
-.btn {
-    background: none;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-}
-
-
-.btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
+.parallax-scroll {
     width: 100%;
-    height: 0%;
-    background: #3498DB;
-    z-index: -1;
-    transition: 0.8s;
-    bottom: 0;
-    border-radius: 50% 50% 0 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+    background-image: linear-gradient(#fffaf1, aquamarine);
 }
 
-.btn:hover {
-    color: white;
+.text-description {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    position: relative;
+    z-index: 10;
+    font-size: 2.5rem;
+    margin: 0 20% 18% 20%;
+    text-align: center;
 }
 
-.btn:hover::before {
-    height: 180%;
+.layer_one {
+    background-image: url("../../assets/parallax/layer_one.png");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+
+.layer_two {
+    background-image: url("../../assets/parallax/layer_two.png");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+}
+
+.layer_three {
+    background-image: url("../../assets/parallax/layer_three.png");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 8;
+    inset: 0;
+}
+
+.layer_four {
+    background-image: url("../../assets/parallax/layer_four.png");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 12;
+    inset: 0;
+}
+
+.dark .parallax-scroll {
+    background-image: linear-gradient(black, aquamarine);
 }
