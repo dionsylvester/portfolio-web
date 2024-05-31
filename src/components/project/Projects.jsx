@@ -7,18 +7,26 @@ const items = [
     {
         id: 1,
         type: "APPLICATION",
-        title: "Carz",
+        title: "Car Boss",
         img: gambar_satu,
-        desc: "2024 – Mobile App (concept) to Predict Car Price using ANN PSO",
+        desc: "2024 – Mobile App (concept) to Wishlist and Predict Car Price using ANN PSO",
         language: "Figma Jupyter-Notebook Python R",
     },
     {
         id: 2,
         type: "WEBSITE",
-        title: "VhoTel",
+        title: "Sea The Div",
         img: gambar_satu,
-        desc: "2023 – Final project for Human and Computer Interaction LAB course",
-        language: "HTML CSS JavaScript",
+        desc: "2024 – Parallax Scrolling Website to Show Must-Do Hobbies in Your Life",
+        language: "VS-Code React CSS Framer-Motion",
+    },
+    {
+        id: 3,
+        type: "APPLICATION",
+        title: "Finance Lover",
+        img: gambar_satu,
+        desc: "2024 – Mobile App (concept) to Manage Wallets and Count Financial Planning",
+        language: "Figma",
     },
 ];
 

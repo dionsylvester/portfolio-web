@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   const cur_theme = localStorage.getItem('cur_theme');
-  const [theme, setTheme] = useState(cur_theme ? cur_theme : 'light');
+  const [theme, setTheme] = useState(cur_theme ? cur_theme : 'dark');
 
   useEffect(() => { localStorage.setItem('cur_theme', theme) }, [theme]);
 

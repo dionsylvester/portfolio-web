@@ -18,6 +18,7 @@
     position: relative;
     z-index: 10;
     font-size: 2.5rem;
+    letter-spacing: .1rem;
     margin: 0 20% 25% 20%;
     text-align: center;
 }

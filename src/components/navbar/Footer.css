@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "NeueMontreal-Light";
+    src: url(../../assets/fonts/NeueMontreal-Light.otf);
+}
+
+@font-face {
+    font-family: 'NeueMontreal-Regular';
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf);
+}
+
+.content-footer {
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: calc(100% - 24vw - 1rem);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-link {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-one {
+    height: 5rem;
+    width: 150px;
+    flex-grow: 1;
+}
+
+.section-two, .section-three {
+    width: 150px;
+}
+
+.section-link img {
+    min-height: 5rem;
+    min-width: 5rem;
+    object-fit: contain;
+}
+
+.section-link h4 {
+    font-family: 'NeueMontreal-Light', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.section-link a {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1c1c1c;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+}
+
+.content-below {
+    padding: 1rem 5rem;
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+.copyright h3 {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: .5px;
+    margin-left: calc(12vw + 1rem);
+}
+
+.copyright p {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: .5px;
+    opacity: 0.75;
+    margin-left: calc(12vw + 1rem);
+    padding-bottom: 3rem;
+}

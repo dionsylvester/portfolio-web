@@ -6,22 +6,22 @@ section {
 
 @font-face {
     font-family: "SF-Mono";
-    src: url(../../assets/fonts/SF-Mono.dmg)
+    src: url(../../assets/fonts/SF-Mono.dmg);
 }
 
 @font-face {
     font-family: "NeueMontreal-Light";
-    src: url(../../assets/fonts/NeueMontreal-Light.otf)
+    src: url(../../assets/fonts/NeueMontreal-Light.otf);
 }
 
 @font-face {
     font-family: "NeueMontreal-Regular";
-    src: url(../../assets/fonts/NeueMontreal-Regular.otf)
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf);
 }
 
 @font-face {
     font-family: "NeueMontreal-Medium";
-    src: url(../../assets/fonts/NeueMontreal-Medium.otf)
+    src: url(../../assets/fonts/NeueMontreal-Medium.otf);
 }
 
 .portfolio {
@@ -55,6 +55,7 @@ section {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -68,8 +69,9 @@ section {
 }
 
 .image-container {
+    display: flex;
     flex: 1;
-    /* height: 50%; */
+    justify-content: right;
 }
 
 .image-container img {
@@ -83,6 +85,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 50%;
+    box-sizing: border-box;
 }
 
 .text-project h3 {
