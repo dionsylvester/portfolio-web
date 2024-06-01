@@ -1,14 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform, useMotionValue, useMotionTemplate } from "framer-motion";
 import './Projects.css'
-import gambar_satu from '../../assets/projects/test-foto.png';
+import carboss from '../../assets/carboss.png';
+import seathediv from '../../assets/seathediv.png';
+import financelover from '../../assets/financelover.png';
 
 const items = [
     {
         id: 1,
         type: "APPLICATION",
         title: "Car Boss",
-        img: gambar_satu,
+        img: carboss,
         desc: "2024 – Mobile App (concept) to Wishlist and Predict Car Price using ANN PSO",
         language: "Figma Jupyter-Notebook Python R",
     },
@@ -16,7 +18,7 @@ const items = [
         id: 2,
         type: "WEBSITE",
         title: "Sea The Div",
-        img: gambar_satu,
+        img: seathediv,
         desc: "2024 – Parallax Scrolling Website to Show Must-Do Hobbies in Your Life",
         language: "VS-Code React CSS Framer-Motion",
     },
@@ -24,7 +26,7 @@ const items = [
         id: 3,
         type: "APPLICATION",
         title: "Finance Lover",
-        img: gambar_satu,
+        img: financelover,
         desc: "2024 – Mobile App (concept) to Manage Wallets and Count Financial Planning",
         language: "Figma",
     },
@@ -39,13 +41,43 @@ const Single = ({item}) =>{
 
     const y = useTransform(scrollYProgress, [0,1], [-100, 100]);
 
+    const handleMouseMove = (e) => {
+        const rect = e.target.getBoundingClientRect();
+
+        const widthR = rect.width;
+        const heightR = rect.height;
+
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        const xPercent = mouseX / widthR - 0.5;
+        const yPercent = mouseY / heightR - 0.5;
+
+        xValue.set(xPercent);
+        yValue.set(yPercent);
+    }
+
+    const xValue = useMotionValue(0);
+    const yValue = useMotionValue(0);
+
+    const mouseXSpring = useSpring(xValue);
+    const mouseYSpring = useSpring(yValue);
+
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["9deg", "-9deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-9deg", "9deg"]);
+
+    const handleMouseLeave = () => {
+        xValue.set(0);
+        yValue.set(0);
+    }
+
     return(
         <section>
             <div className="item-container">
                 <div className="wrapper">
-                    <div className="image-container" ref={ref}>
+                    <motion.div className="image-container" ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ rotateX, rotateY, transformStyle: "preserve-3d", transformOrigin: "center center"}}>
                         <img src={item.img} alt=""/>
-                    </div>
+                    </motion.div>
                     <motion.div className="text-project" style={{ y }}>
                         <h3>{item.type}</h3>
                         <h2>{item.title}</h2>

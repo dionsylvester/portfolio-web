@@ -38,6 +38,7 @@ section {
     font-size: 30px;
     transition: opacity 1s ease-out;
     opacity: 1;
+    z-index: 50;
 }
 
 .portfolio .progress h1 {
