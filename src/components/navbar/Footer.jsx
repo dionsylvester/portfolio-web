@@ -13,8 +13,8 @@ const Footer = ({theme}) => {
                     </div>
                     <div className="section-link section-two">
                         <h4>MAIN</h4>
-                        <a href=""><p>Work</p></a>
-                        <a href=""><p>About</p></a>
+                        <a href="/"><p>Work</p></a>
+                        <a href="/about"><p>About</p></a>
                     </div>
                     <div className="section-link section-three">
                         <h4>SOCIAL</h4>

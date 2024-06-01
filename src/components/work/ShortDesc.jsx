@@ -18,7 +18,7 @@ const ShortDesc = () => {
     return(
     <>
         <div className='parallax-scroll' ref={ref}>
-            <motion.p style={{ y: textY }} className='text-description'>Currently a sophomore computer science major at Bina Nusantara University — Developing digital products through code, story, and passion.</motion.p>
+            <motion.p style={{ y: textY }} className='text-description'>I am currently a sophomore computer science major at Bina Nusantara University — Developing digital products through code, story, and passion.</motion.p>
             <motion.div style={{ y: backgroundYone }} className='layer_one'/>
             <motion.div style={{ y: backgroundYtwo }} className='layer_two' />
             <motion.div style={{ y: backgroundYthree }} className='layer_three'/>

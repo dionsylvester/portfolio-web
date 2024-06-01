@@ -17,7 +17,7 @@
     font-family: 'NeueMontreal-Regular', sans-serif;
     position: relative;
     z-index: 10;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: .1rem;
     margin: 0 20% 25% 20%;
     text-align: center;
@@ -61,4 +61,18 @@
 
 .dark .parallax-scroll {
     background-image: linear-gradient(black, aquamarine);
+}
+
+@media(max-width: 1024px){
+    .text-description {
+        font-size: 2.5rem;
+        margin: 0 17.5% 50% 17.5%;
+    }
+}
+
+@media(max-width: 768px){
+    .text-description {
+        font-size: 1.8rem;
+        margin: 0 15% 50% 15%;
+    }
 }

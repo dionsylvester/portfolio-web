@@ -94,3 +94,28 @@
 .dark .section-link a {
     color: #fffaf1;
 }
+
+@media(max-width: 1024px){
+    .section-link {
+        margin: 0;
+        width: 100px;
+    }
+
+    .copyright h3 {
+        margin-left: calc(8vw);
+    }
+
+    .copyright p {
+        margin-left: calc(8vw);
+    }
+}
+
+@media(max-width: 768px){
+    .copyright h3 {
+        margin-left: calc(12vw);
+    }
+
+    .copyright p {
+        margin-left: calc(12vw);
+    }
+}
