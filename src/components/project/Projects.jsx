@@ -2,8 +2,9 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useTransform, useMotionValue, useMotionTemplate } from "framer-motion";
 import './Projects.css'
 import carboss from '../../assets/carboss.png';
+import finance_lover from '../../assets/finance_lover.png';
 import seathediv from '../../assets/seathediv.png';
-import financelover from '../../assets/financelover.png';
+import summe from '../../assets/summe.png';
 
 const items = [
     {
@@ -16,20 +17,28 @@ const items = [
     },
     {
         id: 2,
-        type: "WEBSITE",
-        title: "Sea The Div",
-        img: seathediv,
-        desc: "2024 – Parallax Scrolling Website to Show Must-Do Hobbies in Your Life",
-        language: "VS-Code React CSS Framer-Motion",
-    },
-    {
-        id: 3,
         type: "APPLICATION",
         title: "Finance Lover",
-        img: financelover,
+        img: finance_lover,
         desc: "2024 – Mobile App (concept) to Manage Wallets and Count Financial Planning",
         language: "Figma",
     },
+    {
+        id: 3,
+        type: "WEBSITE",
+        title: "Sea The Div",
+        img: seathediv,
+        desc: "2024 – Parallax Scrolling Website to Show The Other Side of The World",
+        language: "VS-Code React CSS Framer-Motion",
+    },
+    {
+        id: 4,
+        type: "APPLICATION",
+        title: "SumMe",
+        img: summe,
+        desc: "2023 – Mobile App to Summarize Long Paragraph Text TL;DR",
+        language: "Figma Python"
+    }
 ];
 
 const Single = ({item}) =>{
