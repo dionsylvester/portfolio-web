@@ -1,0 +1,29 @@
+.textmsg {
+    width: 50vw;
+    height: 40vh; 
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    pointer-events: auto; 
+}
+
+.text-hover-stroke {
+    fill: transparent;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    stroke: #1c1c1c; 
+    transition: stroke 0.3s ease;
+}
+
+.dark .text-hover-stroke {
+    stroke: #fffaf1;
+}

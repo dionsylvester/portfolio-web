@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf)
+}
+
+.parallax-scroll {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+    background-image: linear-gradient(#fffaf1, aquamarine);
+}
+
+.text-description {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    margin: 0 20% 25% 20%;
+    text-align: center;
+}
+
+.layer_one {
+    background-image: url("../../assets/parallax/layer_one.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+
+.layer_two {
+    background-image: url("../../assets/parallax/layer_two.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+}
+
+.layer_three {
+    background-image: url("../../assets/parallax/layer_three.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 8;
+    inset: 0;
+}
+
+.layer_four {
+    background-image: url("../../assets/parallax/layer_four.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    z-index: 12;
+    inset: 0;
+}
+
+.dark .parallax-scroll {
+    background-image: linear-gradient(black, aquamarine);
+}
+
+@media(max-width: 1024px){
+    .text-description {
+        font-size: 2.5rem;
+        margin: 0 17.5% 50% 17.5%;
+    }
+}
+
+@media(max-width: 768px){
+    .text-description {
+        font-size: 1.8rem;
+        margin: 0 15% 50% 15%;
+    }
+}
+
+.encrypted-chars {
+    opacity: 0.35;
+    filter: blur(0.5px);
+    transition: color 0.2s ease;
+}
+
+.revealed-chars {
+    color: #1c1c1c;
+    font-weight: 500;
+}
+
+.dark .revealed-chars {
+    color: #fffaf1;
+}

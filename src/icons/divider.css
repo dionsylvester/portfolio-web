@@ -1,0 +1,12 @@
+.divider::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: #64ffda;
+}
+
+.dark .divider::after {
+    background-color: #57cbff;
+}

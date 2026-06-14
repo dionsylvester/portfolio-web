@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fffaf1;
+  color: #1c1c1c;
+  /* --bg-blur-color: #fffaf1; */
+}
+
+.container.dark {
+  background: #1c1c1c;
+  color: #fffaf1;
+  /* --bg-blur-color: #1c1c1c; */
+}

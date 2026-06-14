@@ -1,0 +1,229 @@
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "SF-Mono";
+    src: url(../../assets/fonts/SFMonoSemibold.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal-Light";
+    src: url(../../assets/fonts/NeueMontreal-Light.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal-Medium";
+    src: url(../../assets/fonts/NeueMontreal-Medium.otf);
+}
+
+.portfolio {
+    position: relative;
+}
+
+.portfolio .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 4.2rem;
+    text-align: center;
+    color: #417755;
+    font-size: 30px;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    z-index: 50;
+}
+
+.portfolio .progress h1 {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    letter-spacing: 1px;
+}
+
+.progress.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 0s linear 0s;
+}
+
+.portfolio .progress-bar {
+    height: 10px;
+    margin-top: 2px;
+    background-color: #d2e692;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.image-container {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+    overflow: visible;
+}
+
+.image-container .border-glow-card {
+    width: 600px;
+    height: 400px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.border-glow-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible; 
+  z-index: 1;
+}
+
+.image-container img {
+    width: 584px;
+    height: 384px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px; 
+    margin: auto;
+}
+
+.text-project {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+.text-project h3 {
+    font-family: 'NeueMontreal-Light', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .2em;
+}
+
+.text-project h2 {
+    font-family: 'NeueMontreal-Medium', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.text-project p {
+    color: gray;
+    font-size: 20px;
+}
+
+.text-project p.type-language {
+    font-family: 'SF-Mono', monospace;
+    color: #57cbff;
+}
+
+.dark .text-project p.type-language {
+    color: #64ffda;
+}
+
+@media(max-width: 1023px){
+    .portfolio .progress {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .image-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .image-container img {
+        object-fit: contain;
+    }
+
+    .text-project {
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-project h3 {
+        font-size: 2rem;
+    }
+
+    .text-project h2 {
+        font-size: 4rem;
+    }
+
+    .text-project p {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 768px){
+    .portfolio .progress {
+        font-size: 1rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .image-container img {
+        object-fit: contain;
+    }
+
+    .text-project {
+        transform: none !important;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-project h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-project h2 {
+        font-size: 3rem;
+    }
+
+    .text-project p {
+        font-size: 1rem;
+    }
+}

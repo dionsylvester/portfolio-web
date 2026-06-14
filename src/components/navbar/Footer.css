@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "NeueMontreal-Light";
+    src: url(../../assets/fonts/NeueMontreal-Light.otf);
+}
+
+@font-face {
+    font-family: 'NeueMontreal-Regular';
+    src: url(../../assets/fonts/NeueMontreal-Regular.otf);
+}
+
+.content-footer {
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: calc(100% - 24vw - 1rem);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-link {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-one {
+    height: 5rem;
+    width: 150px;
+    flex-grow: 1;
+}
+
+.section-two, .section-three {
+    width: 150px;
+}
+
+.section-link img {
+    min-height: 5rem;
+    min-width: 5rem;
+    object-fit: contain;
+}
+
+.section-link h4 {
+    font-family: 'NeueMontreal-Light', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.section-link a {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1c1c1c;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+}
+
+.content-below {
+    padding: 1rem 5rem;
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+.copyright h3 {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: .5px;
+    margin-left: calc(12vw + 1rem);
+}
+
+.copyright p {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: .5px;
+    opacity: 0.75;
+    margin-left: calc(12vw + 1rem);
+    padding-bottom: 3rem;
+}
+
+.dark .section-link a {
+    color: #fffaf1;
+}
+
+@media(max-width: 1024px){
+    .section-link {
+        margin: 0;
+        width: 100px;
+    }
+
+    .copyright h3 {
+        margin-left: calc(8vw);
+    }
+
+    .copyright p {
+        margin-left: calc(8vw);
+    }
+}
+
+@media(max-width: 768px){
+    .copyright h3 {
+        margin-left: calc(12vw);
+    }
+
+    .copyright p {
+        margin-left: calc(12vw);
+    }
+}
+
+.animation-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.animation-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    height: 0.05em;
+    width: 100%;
+    background-color: currentColor;
+    pointer-events: none;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-link svg {
+    margin-left: 0.3em;
+    width: 0.55em;
+    height: 0.55em;
+    transform: translateY(4px);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.animation-link:hover svg {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.link-001::before {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.link-001:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.link-002::before {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.link-002:hover::before {
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.footer-resume-btn {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #1c1c1c;
+    margin-top: 0.8rem;
+}
+
+.dark .footer-resume-btn {
+    color: #fffaf1;
+}
+
+.pdf-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 2rem;
+}
+
+.pdf-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pdf-modal-popup {
+    position: relative;
+    width: 90vw;
+    max-width: 900px;
+    height: 85vh;
+    background-color: #120F17;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    z-index: 10;
+}
+
+.light .pdf-modal-popup {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pdf-viewer-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: 0.5rem;
+}
+
+.pdf-viewer-container iframe {
+    border: none;
+    border-radius: 18px;
+}
+
+.pdf-modal-close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'SF-Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    transition: background-color 0.2s ease, transform 0.1s active;
+}
+
+.pdf-modal-close-btn:hover {
+    background-color: #1c1c1c;
+}
+
+.light .pdf-modal-close-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.light .pdf-modal-close-btn:hover {
+    background-color: #f5f5f7;
+}
+
+.pdf-modal-close-btn:active {
+    scale: 0.95;
+}
+
+@media(max-width: 768px) {
+    .pdf-modal-overlay {
+        padding: 1rem;
+    }
+    .pdf-modal-popup {
+        width: 100%;
+        height: 80vh;
+    }
+    .pdf-modal-close-btn {
+        top: -10px;
+        right: -10px;
+        width: 35px;
+        height: 35px;
+        font-size: 0.85rem;
+    }
+}
