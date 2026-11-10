@@ -1,0 +1,9 @@
+.divider::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: var(--accent);
+    transition: background-color 0.3s;
+}
