@@ -38,7 +38,7 @@ const Footer = () => {
             <div className='content-below'>
                 <div className='copyright'>
                     <h3>&copy; {new Date().getFullYear()} Dionisius Sylvester Wime. All Rights Reserved.</h3>
-                    <p>Designed & built by Dionisius Sylvester Wime with love and Caffe Latte (less ice, no sugar).</p>
+                    <p>Designed & built by Dionisius Sylvester Wime with love and Iced Matcha Latte (no sugar).</p>
                 </div>
             </div>
         </div>
